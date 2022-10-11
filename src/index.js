@@ -46,12 +46,16 @@ t.sort((a , b) => {
 console.log(t);
 */
 t.sort((a,b) => {return a-b});
-t = t.filter((e) => e > 0)
+t = t.filter((e) => Math.abs(e) > 50)
+t = t.map(e => e.toFixed(2));
+t.forEach((e , index) => {
+    console.log(index , e);
+})
 console.log(t);
 
 
  document.addEventListener('DOMContentLoaded' , () => {
-    console.log('Page loaded');
+    console.log('Negrid');
     let idozito; 
 
     document.getElementById('szinezes').addEventListener('click' , ()=> {
